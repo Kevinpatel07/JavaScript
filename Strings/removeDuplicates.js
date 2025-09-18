@@ -4,10 +4,15 @@ function removeDuplicates(str){
 
     for(let i=0; i<str.length; i++){
         let duplicate = false
-        for(let j=i; j<result.length; j++){
+        for(let j=0; j<result.length; j++){
             if(str[i] === result[j]){
-                result+=str[i]
+                duplicate = true
+                break
             }
+        }
+
+        if(!duplicate){
+            result+=str[i]
         }
     }
 
